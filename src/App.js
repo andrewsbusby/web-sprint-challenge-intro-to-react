@@ -38,9 +38,9 @@ const App = () => {
 return (
   <div className="App">
     <H1style className="Header">Characters</H1style>
-    <Character data={swCharacter} />
-    {swCharacter.map(ch => {
-      return <Character key={ch.id} info ={ch}/>
+    <Character data = {swCharacter} />
+    {swCharacter.map((data) => {
+      return <Character key={data} />
     })}
   </div>
 );
