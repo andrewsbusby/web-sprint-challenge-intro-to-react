@@ -10,12 +10,14 @@ font-size: 1.2rem;
 
 
 function Character(props) {
-    const {res} = props
+    const {data} = props
     
-    console.log(props);
+    if(!data) return <h3>Loading...</h3>; 
+    
+    // console.log(props);
     return (
   <Body>
-      <p>{}</p>
+      <h2>{data.name}</h2>
   </Body>
   
     )

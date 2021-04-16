@@ -21,23 +21,27 @@ const App = () => {
   useEffect(() => {
     axios.get("https://swapi.dev/api/people/")
     .then((res) => {
-      console.log(res.data);
-      setSwCharacter(res.data.name);
+        setSwCharacter(res.data);
+
       
-      console.log(swCharacter);
-        // const {data.name} = props;
+      
+      
+    
+        
     })
-    .catch((err) => {
-        console.log(err);
-    })
+    // .catch((err) => {
+    //     console.log(err);
+    // })
 }, [])
 
 
 return (
   <div className="App">
     <H1style className="Header">Characters</H1style>
-    <Character  />
-  
+    <Character data={swCharacter} />
+    {swCharacter.map(ch => {
+      return <Character key={ch.id} info ={ch}/>
+    })}
   </div>
 );
 }
