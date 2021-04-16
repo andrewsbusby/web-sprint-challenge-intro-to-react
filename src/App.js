@@ -12,16 +12,20 @@ const H1style = styled.h1`
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
-
+  const [swCharacter, setSwCharacter] = useState([]);
+  
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
-  const [swCharacter, setSwCharacter] = useState([]);
+  
   useEffect(() => {
     axios.get("https://swapi.dev/api/people/")
     .then((res) => {
       console.log(res.data);
       setSwCharacter(res.data.name);
+      
+      console.log(swCharacter);
+        // const {data.name} = props;
     })
     .catch((err) => {
         console.log(err);
@@ -32,7 +36,7 @@ const App = () => {
 return (
   <div className="App">
     <H1style className="Header">Characters</H1style>
-    <Character data = {swCharacter} />
+    <Character  />
   
   </div>
 );

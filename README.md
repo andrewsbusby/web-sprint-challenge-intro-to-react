@@ -31,13 +31,13 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-
+  React JS is disigned to deal with the problem of having a lot of information coming in. You can have a lot of different things on one page and have it seperated into different components so it can be better orginized. 
 1. Describe component state.
-
+  Component state is information of data that is in the component. State can be changed or manipulated. 
 1. Describe props.
-
+  Props are properties of a component.They are able to be passed on the the child emelment of the parent. They cannot be changed. 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
-
+  Side effects happen when a component is mounted to the DOM. You syn effects in react with the 'useEffect' hook. Adding a dependancy array will make it to where you will have more control over the side effect. 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
