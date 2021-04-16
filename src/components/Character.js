@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 
+
 const Body = styled.div`
 width: 75%;
 font-size: 1.2rem;
@@ -17,7 +18,7 @@ function Character(props) {
     // console.log(props);
     return (
   <Body>
-      <h2>{data.name}</h2>
+      <h2>{props.name}</h2>
   </Body>
   
     )
