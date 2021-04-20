@@ -15,10 +15,10 @@ function Character(props) {
     
     if(!data) return <h3>Loading...</h3>; 
     
-    // console.log(props);
+    console.log(props);
     return (
   <Body>
-      <h2>{props.name}</h2>
+      <h2>{props.data.name}</h2>
   </Body>
   
     )
