@@ -23,7 +23,7 @@ const App = () => {
     .then((res) => {
         setSwCharacter(res.data);
     
-        console.log(res.data);
+        // console.log(res.data);
     })
     // .catch((err) => {
     //     console.log(err);
