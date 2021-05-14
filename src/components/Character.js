@@ -7,6 +7,8 @@ const Chardiv = styled.div`
     font-weight: bold;
     width: 45%;
     margin: auto;
+    box-shadow: 4px 4px 5px 2px black,
+                -4px -4px 5px 2px black;
 `
 const H3 = styled.h3`
     font-size: 1.4rem;
