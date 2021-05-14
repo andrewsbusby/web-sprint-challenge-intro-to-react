@@ -4,8 +4,8 @@ import React from 'react';
 function Char(props){
     const {data} = props
 
-    console.log(props);
-// debugger
+    // console.log(props);
+
     if(!data) return <h4>Loading...</h4>
 
     return(

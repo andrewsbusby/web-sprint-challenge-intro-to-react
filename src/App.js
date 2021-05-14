@@ -5,6 +5,7 @@ import Char from './components/Character';
 
 const App = () => {
 
+  const [swChar, setSwChar] = useState();
   useEffect(() => {
     axios.get('https://swapi.dev/api/people/')
     .then((res) =>{
@@ -16,7 +17,7 @@ const App = () => {
     })
   }, []) 
   
-  const [swChar, setSwChar] = useState();
+  
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -27,9 +28,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-       {swChar.map(item => {
-         return < Char data={item} />
-       })}
+      {<Char data={swChar}/> }
     </div>
   );
 }
