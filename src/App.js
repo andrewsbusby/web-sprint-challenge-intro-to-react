@@ -9,12 +9,12 @@ const App = () => {
     axios.get('https://swapi.dev/api/people/')
     .then((res) =>{
       setSwChar(res.data);
-      console.log(res.data);
+      
     })
     .catch((err)=>{
       console.log(err);
     })
-  }) 
+  }, []) 
   
   const [swChar, setSwChar] = useState();
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -27,6 +27,9 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+       {swChar.map(item => {
+         return < Char data={item} />
+       })}
     </div>
   );
 }
