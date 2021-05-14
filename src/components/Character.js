@@ -11,6 +11,11 @@ const Chardiv = styled.div`
 const H3 = styled.h3`
     font-size: 1.4rem;
     color: #A89B92;
+    text-shadow: 2px 2px 3px black, 
+                 -2px -2px 3px black;
+`
+const Para = styled.p`
+    color: #ADAFAC;
 
 `
 
@@ -24,11 +29,11 @@ function Char(props){
     return(
         <Chardiv>
             <H3>Name: {data.name}</H3>
-            <p>Height: {data.height}</p>
-            <p>Mass: {data.mass}</p>
-            <p>Hair Color: {data.hair_color}</p>
-            <p>Birth Year: {data.birth_year}</p>
-            <p>Films: {data.films}</p>
+            <Para>Height: {data.height}</Para>
+            <Para>Mass: {data.mass}</Para>
+            <Para>Hair Color: {data.hair_color}</Para>
+            <Para>Birth Year: {data.birth_year}</Para>
+            <Para>Films: {data.films}</Para>
         </Chardiv>
     )
 
